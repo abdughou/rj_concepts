@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ClickCounter name='buttonClick'/>
+        <HoverCounter name='mouseOver' /> 
+        {/* <ErrorBoundary><Hero heroName="Spiderman"/></ErrorBoundary>
+        <ErrorBoundary><Hero heroName="Spiderman1"/></ErrorBoundary>
+        <ErrorBoundary><Hero heroName="Joker"/></ErrorBoundary> */}
     </div>
   );
 }
